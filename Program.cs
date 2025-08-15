@@ -30,10 +30,10 @@ namespace AppCoffee
                 switch (opcion)
                 {
                     case "1":
-                        //ShowLogin();
+                        LoginMenu.ShowLogin();
                         break;
                     case "2":
-                        //MostrarRegistro();
+                        SignupMenu.ShowSignup();
                         break;
                     case "3":
                         Console.WriteLine("\n¡Gracias por usar AppCoffee!");
