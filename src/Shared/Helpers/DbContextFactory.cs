@@ -1,8 +1,9 @@
-using CoffeeApp.src.Shared.Context;
+using AppCoffee.src.Shared.Context;
+using CoffeeApp.src.Shared.Helpers;
 using Microsoft.EntityFrameworkCore; 
 using Microsoft.Extensions.Configuration;
 
-namespace CoffeeApp.src.Shared.Helpers
+namespace AppCoffee.src.Shared.Helpers
 {
     public class DbContextFactory
     {
