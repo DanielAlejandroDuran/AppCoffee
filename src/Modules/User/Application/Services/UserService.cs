@@ -21,7 +21,7 @@ public class UserService : IUserService
         return _repo.GetAllAsync()!;
     }
 
-    public async Task RegistrarUsuarioConTareaAsync(string name, string email)
+    public async Task RegistrarUsuarioConTareaAsync(string name, string email, string password)
     {
         var existentes = await _repo.GetAllAsync();
         if (existentes.Any(u => u?.Email == email))
@@ -30,6 +30,7 @@ public class UserService : IUserService
         {
             Name = name,
             Email = email,
+            Password = password,
         };
 
         _repo.Add(user);

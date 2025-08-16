@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using AppCoffee.src.Modules.User.Application.Interfaces;
 using AppCoffee.src.Modules.User.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using CoffeeApp.src.Shared.Context;
+using AppCoffee.src.Shared.Context;
 
 namespace AppCoffee.src.Modules.User.Infrastructure.Repositories;
 
-/*public class UserRepository : IUserRepository
+public class UserRepository : IUserRepository
 {
     private readonly AppDbContext _context;
 
@@ -20,22 +20,22 @@ namespace AppCoffee.src.Modules.User.Infrastructure.Repositories;
 
     public async Task<Usuario?> GetByIdAsync(int id)
     {
-        return await _context.Users
+        return await _context.usuarios
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
     public async Task<IEnumerable<Usuario?>> GetAllAsync() =>
-        await _context.Users.ToListAsync();
+        await _context.usuarios.ToListAsync();
 
     public void Add(Usuario entity) =>
-        _context.Users.Add(entity);
+        _context.usuarios.Add(entity);
 
     public void Remove(Usuario entity) =>
-        _context.Users.Remove(entity);
+        _context.usuarios.Remove(entity);
 
     public void Update(Usuario entity) =>
         _context.SaveChanges();
 
     public async Task SaveAsync() =>
     await _context.SaveChangesAsync();
-}*/
+}
