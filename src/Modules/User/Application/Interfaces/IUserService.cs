@@ -8,7 +8,7 @@ namespace AppCoffee.src.Modules.User.Application.Interfaces
 {
     public interface IUserService
     {
-        Task RegistrarUsuarioConTareaAsync(string name, string email);
+        Task RegistrarUsuarioConTareaAsync(string name, string email, string password);
         Task ActualizarUsuario(int id, string name, string email);
         Task EliminarUsuario(int id);
         Task<Usuario?> ObtenerUsuarioPorIdAsync(int id);
