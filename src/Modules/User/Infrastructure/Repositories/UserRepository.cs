@@ -21,7 +21,7 @@ public class UserRepository : IUserRepository
     public async Task<Usuario?> GetByIdAsync(int id)
     {
         return await _context.usuarios
-            .FirstOrDefaultAsync(u => u.Id == id);
+            .FirstOrDefaultAsync(u => u.id == id);
     }
 
     public async Task<IEnumerable<Usuario?>> GetAllAsync() =>
@@ -34,7 +34,7 @@ public class UserRepository : IUserRepository
         _context.usuarios.Remove(entity);
 
     public void Update(Usuario entity) =>
-        _context.SaveChanges();
+         _context.usuarios.Update(entity);
 
     public async Task SaveAsync() =>
     await _context.SaveChangesAsync();

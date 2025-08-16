@@ -11,7 +11,7 @@ namespace AppCoffee.src.Modules.User.UI;
 
 public class LoginMenu
 {
-    public static void ShowLogin()
+    public static void ShowLogin(UserRepository userRepository)
     {
         Console.Clear();
         Console.WriteLine("====================================");
@@ -28,7 +28,7 @@ public class LoginMenu
 
 public class SignupMenu
 {
-    public static void ShowSignup()
+    public static void ShowSignup(UserRepository userRepository)
     {
         Console.Clear();
         Console.WriteLine("====================================");
