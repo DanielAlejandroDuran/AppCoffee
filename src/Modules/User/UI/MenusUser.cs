@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AppCoffee.src.Modules.User.Infrastructure.Repositories;
-using AppCoffee.src.Modules.User.Application.Services;
-using AppCoffee.src.Modules.User.Domain.Entities;
-using AppCoffee.src.Shared.Context;
+using CoffeeApp.src.Modules.User.Infrastructure.Repositories;
+using CoffeeApp.src.Modules.User.Application.Services;
+using CoffeeApp.src.Modules.User.Domain.Entities;
+using CoffeeApp.src.Shared.Context;
 
-namespace AppCoffee.src.Modules.User.UI;
+namespace CoffeeApp.src.Modules.User.UI;
 
 public class LoginMenu
 {

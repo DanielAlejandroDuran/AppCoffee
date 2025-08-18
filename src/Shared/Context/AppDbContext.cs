@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using CoffeeApp.src.Modules.CoffeVarieties.Domain.Entities;
+using CoffeeApp.src.Modules.User.Domain.Entities;
 
 namespace CoffeeApp.src.Shared.Context
 {
@@ -9,6 +10,7 @@ namespace CoffeeApp.src.Shared.Context
         {
         }
             // DbSets para TODAS las tablas de tu BD
+            public DbSet<Usuario> Usuarios { get; set; }
             public DbSet<Variety> Varieties { get; set; }
             public DbSet<VarietyImage> VarietyImages { get; set; }
             public DbSet<Resistance> Resistances { get; set; }
