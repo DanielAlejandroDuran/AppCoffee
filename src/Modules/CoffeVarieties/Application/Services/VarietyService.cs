@@ -661,6 +661,6 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.Application.Services
         Task<IEnumerable<VarietyResponseDto>> IVarietyService.GetInactiveVarietiesAsync()
         {
             throw new NotImplementedException();
-        }       
+        }
     }
 }

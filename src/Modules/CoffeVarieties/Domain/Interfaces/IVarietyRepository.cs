@@ -6,7 +6,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.Domain.Interfaces
     /// <summary>
     /// Repositorio para el manejo de variedades de café
     /// </summary>
-    public class IVarietyRepository
+    public interface IVarietyRepository
     {
         // ===== CRUD BÁSICO =====
         
