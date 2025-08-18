@@ -9,7 +9,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
     /// </summary>
     public class VarietyMainMenu
     {
-        private readonly IVarietyService _varietyService;
+        public readonly IVarietyService _varietyService;
 
         public VarietyMainMenu(IVarietyService varietyService)
         {
@@ -77,7 +77,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private void ShowHeader()
+        public void ShowHeader()
         {
             Console.Clear();
             Console.WriteLine("╔══════════════════════════════════════════════════════════════╗");
@@ -86,7 +86,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             Console.WriteLine();
         }
 
-        private void ShowOptions()
+        public void ShowOptions()
         {
             Console.WriteLine("📋 MENÚ PRINCIPAL:");
             Console.WriteLine("1. 📚 Ver todas las variedades");
@@ -100,7 +100,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             Console.WriteLine();
         }
 
-        private async Task ShowAllVarietiesAsync()
+        public async Task ShowAllVarietiesAsync()
         {
             Console.Clear();
             Console.WriteLine("📚 TODAS LAS VARIEDADES DE CAFÉ\n");
@@ -117,7 +117,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             DisplayVarietiesList(varietyList);
         }
 
-        private async Task SearchVarietyAsync()
+        public async Task SearchVarietyAsync()
         {
             Console.Clear();
             Console.WriteLine("🔍 BÚSQUEDA DE VARIEDADES\n");
@@ -144,7 +144,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             DisplayVarietiesList(varietyList);
         }
 
-        private async Task ShowFilterMenuAsync()
+        public async Task ShowFilterMenuAsync()
         {
             Console.Clear();
             Console.WriteLine("🎛️ FILTROS DE VARIEDADES\n");
@@ -185,7 +185,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task ShowVarietyDetailsAsync()
+        public async Task ShowVarietyDetailsAsync()
         {
             Console.Clear();
             Console.WriteLine("📄 FICHA TÉCNICA DETALLADA\n");
@@ -219,7 +219,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task ShowRecommendationsAsync()
+        public async Task ShowRecommendationsAsync()
         {
             Console.Clear();
             Console.WriteLine("💡 SUGERENCIAS PERSONALIZADAS\n");
@@ -292,7 +292,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task GeneratePdfCatalogAsync()
+        public async Task GeneratePdfCatalogAsync()
         {
             Console.Clear();
             Console.WriteLine("📑 GENERADOR DE CATÁLOGO PDF\n");
@@ -362,7 +362,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task ShowStatisticsAsync()
+        public async Task ShowStatisticsAsync()
         {
             Console.Clear();
             Console.WriteLine("📊 ESTADÍSTICAS DE VARIEDADES\n");
@@ -391,7 +391,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
         }
 
         // Métodos auxiliares para filtros específicos
-        private async Task FilterByPlantHeightAsync()
+        public async Task FilterByPlantHeightAsync()
         {
             Console.WriteLine("\nSeleccione el porte de planta:");
             Console.WriteLine("0. Bajo");
@@ -421,7 +421,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task FilterByGrainSizeAsync()
+        public async Task FilterByGrainSizeAsync()
         {
             Console.WriteLine("\nSeleccione el tamaño de grano:");
             Console.WriteLine("1. Pequeño");
@@ -453,7 +453,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private async Task FilterByAltitudeAsync()
+        public async Task FilterByAltitudeAsync()
         {
             Console.Write("Ingrese altitud mínima (msnm): ");
             if (!int.TryParse(Console.ReadLine(), out int minAltitude))
@@ -476,7 +476,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             DisplayVarietiesList(varietyList);
         }
 
-        private async Task FilterByYieldPotentialAsync()
+        public async Task FilterByYieldPotentialAsync()
         {
             Console.WriteLine("\nSeleccione el potencial de rendimiento mínimo:");
             Console.WriteLine("1. Bajo");
@@ -508,7 +508,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             }
         }
 
-        private Task ShowCombinedFiltersAsync()
+        public Task ShowCombinedFiltersAsync()
         {
             Console.WriteLine("🔧 FILTROS COMBINADOS - Próximamente implementado");
             // TODO: Implementar filtros combinados usando VarietyFilterDto
@@ -516,7 +516,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
         }
 
         // Métodos de visualización
-        private void DisplayVarietiesList(List<VarietyResponseDto> varieties)
+        public void DisplayVarietiesList(List<VarietyResponseDto> varieties)
         {
             if (!varieties.Any())
             {
@@ -543,7 +543,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             Console.WriteLine($"\nTotal: {varieties.Count} variedades encontradas");
         }
 
-        private void DisplayVarietyDetails(VarietyResponseDto variety)
+        public void DisplayVarietyDetails(VarietyResponseDto variety)
         {
             Console.Clear();
             Console.WriteLine("╔══════════════════════════════════════════════════════════════╗");
@@ -597,7 +597,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             Console.WriteLine($"\n📅 Fecha de registro: {variety.FechaRegistro:dd/MM/yyyy}");
         }
 
-        private string TruncateString(string input, int maxLength)
+        public string TruncateString(string input, int maxLength)
         {
             if (string.IsNullOrEmpty(input))
                 return "N/A";
@@ -605,7 +605,7 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.UI
             return input.Length <= maxLength ? input : input[..(maxLength - 3)] + "...";
         }
 
-        private string GetAltitudeDisplay(int? minAltitude, int? maxAltitude)
+        public string GetAltitudeDisplay(int? minAltitude, int? maxAltitude)
         {
             if (minAltitude.HasValue && maxAltitude.HasValue)
                 return $"{minAltitude}-{maxAltitude}";
