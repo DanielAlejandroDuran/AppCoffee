@@ -2,11 +2,11 @@ using CoffeeApp.src.Modules.CoffeVarieties.Application.DTOs;
 using CoffeeApp.src.Modules.CoffeVarieties.Domain.Enums;
 
 namespace CoffeeApp.src.Modules.CoffeVarieties.Application.Interfaces;
-    /// <summary>
-    /// Interfaz del servicio de variedades con lógica de negocio
-    /// </summary>
-    public class IVarietyService
-    {
+/// <summary>
+/// Interfaz del servicio de variedades con lógica de negocio
+/// </summary>
+public interface IVarietyService
+{
     // ===============================
     // CRUD BÁSICO CON DTOs
     // ===============================
@@ -238,5 +238,6 @@ namespace CoffeeApp.src.Modules.CoffeVarieties.Application.Interfaces;
     /// <summary>
     /// Compara múltiples variedades lado a lado
     /// </summary>
-    Task<VarietyComparisonDto> CompareVarietiesAsync(List<int> varietyIds);        
+    Task<VarietyComparisonDto> CompareVarietiesAsync(List<int> varietyIds);
 }
+    
