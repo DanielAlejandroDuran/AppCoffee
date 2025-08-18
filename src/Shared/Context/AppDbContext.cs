@@ -1,7 +1,7 @@
 using AppCoffee.src.Modules.User.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppCoffee.src.Shared.Context;
+namespace CoffeeApp.src.Shared.Context;
 
 public class AppDbContext : DbContext
 {
