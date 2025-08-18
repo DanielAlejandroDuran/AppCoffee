@@ -2,11 +2,12 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using AppCoffee.src.Shared.Context;
-using AppCoffee.src.Modules.User.Infrastructure.Repositories;
-using AppCoffee.src.Modules.User.UI; // Para LoginMenu y SignupMenu
-using AppCoffee.src.Modules.User.Application.Services;
-namespace AppCoffee
+using CoffeeApp.src.Shared.Context;
+using CoffeeApp.src.Modules.User.Infrastructure.Repositories;
+using CoffeeApp.src.Modules.User.UI; // Para LoginMenu y SignupMenu
+using CoffeeApp.src.Modules.User.Application.Services;
+
+namespace CoffeeApp
 {
     class Program
     {

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace AppCoffee.src.Modules.User.Domain.Entities
+namespace CoffeeApp.src.Modules.User.Domain.Entities
 {
     public class Usuario
     {
