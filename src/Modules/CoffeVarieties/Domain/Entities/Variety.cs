@@ -1,7 +1,7 @@
-using AppCoffee.src.Modules.CoffeVarieties.Domain.Entities;
+using CoffeeApp.src.Modules.CoffeVarieties.Domain.Entities;
 using CoffeeApp.src.Modules.CoffeVarieties.Domain.Enums;
 
-namespace AppCoffee.src.Modules.CoffeVarieties.Domain.Entities
+namespace CoffeeApp.src.Modules.CoffeVarieties.Domain.Entities
 {
     public class Variety
     {

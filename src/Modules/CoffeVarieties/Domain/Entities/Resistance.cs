@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
-using AppCoffee.src.Modules.CoffeVarieties.Domain.Enums;
+using CoffeeApp.src.Modules.CoffeVarieties.Domain.Enums;
 
-namespace AppCoffee.src.Modules.CoffeVarieties.Domain.Entities
+namespace CoffeeApp.src.Modules.CoffeVarieties.Domain.Entities
 {
     public class Resistance
     {
-/// <summary>
+        /// <summary>
         /// ID único de la resistencia (Primary Key)
         /// </summary>
         [Key]
